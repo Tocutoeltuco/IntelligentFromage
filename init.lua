@@ -106,7 +106,7 @@ local function readNewMessages(topic) -- Reads the new messages of a topic
 							
 							local func = dialogflowValidIntents[dialogflowResponse.intent.displayName] -- checks if the DialogFlow intent is set here
 							if func ~= nil then
-								local link = "https://atelier801.com/topic?f=" .. topic.f .. "&t=" .. topic.d .. "&p=" .. page .. "#m" .. index -- generates a link to the message that we'll answer
+								local link = "https://atelier801.com/topic?f=" .. topic.f .. "&t=" .. topic.t .. "&p=" .. page .. "#m" .. index -- generates a link to the message that we'll answer
 								
 								postMessage = postMessage .. "[spoiler=" .. message.author .. " [url=" .. link .. "](#" .. index .. ")[/url]]" -- adds a spoiler with the link to the message and the author name
 								postMessage = postMessage .. "[quote=" .. string.gsub(message.author, "%#", " ") .. "]" .. message.content .. "[/quote]" -- quotes the message
