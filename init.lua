@@ -155,9 +155,9 @@ coroutine.wrap(function()
 	print("Loaded!")
 	
 	print("Connecting the bot...")
-    client.connect(BOT_USERNAME, BOT_PASSWORD) -- connects to the client
+	client.connect(BOT_USERNAME, BOT_PASSWORD) -- connects to the client
 	
-    if client.isConnected() then
+	if client.isConnected() then
 		print("Connected. Executing the bot!")
 		while true do
 			botLoop() -- executes the botLoop function
@@ -166,9 +166,9 @@ coroutine.wrap(function()
 	else
 		print("Can't execute the bot.")
 		print(err)
-    end
+	end
 	
-    client.disconnect() -- disconnects the client
+	client.disconnect() -- disconnects the client
 	print("Script end.")
-    os.execute("pause >nul") -- ends the script
+	os.execute("pause >nul") -- ends the script
 end)()
